@@ -58,10 +58,8 @@ For each dataset segment:
 
 A GPS screenshot is taken immediately before recording begins
 
-A GPS screenshot is taken immediately after recording ends
-
-Each video segment is therefore bounded by two explicit spatiotemporal reference points.
-Segment anchors are nested within the corresponding daily anchors, creating a hierarchical verification structure:
+Each video segment is anchored by a single explicit spatiotemporal reference point at its start.
+Segment anchors are nested within the corresponding daily anchors, creating a hierarchical verification structure.
 
 Daily GPS anchors → Segment GPS anchors → Video file metadata
 
