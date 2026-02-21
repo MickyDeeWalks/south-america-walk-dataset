@@ -1,135 +1,145 @@
 Long-Horizon Egocentric Locomotion Dataset
+TL;DR — Key Signals
 
-One-person, fully traced expedition — clean, legally safe, and fully auditable provenance 
-
-Event-driven capture — records only meaningful changes in terrain, surface, environment, or physiological state
-
-Forward-facing, silent, uncompressed video — optimized for AI, robotics, and computer vision research
-
-GPS-anchored segments with metadata — supports trajectory reconstruction, mapping, and SLAM while preserving discretion
+✓ Single-person, fully documented expedition — complete traceability, auditable provenance ✅
+✓ Event-driven capture — records only meaningful changes in terrain, surface, environment, or physiological state 🌄
+✓ Forward-facing, silent, uncompressed video — optimized for AI, robotics, and computer vision research 🎥
+✓ GPS-anchored segments with separate metadata — supports trajectory reconstruction, mapping, SLAM, geospatial analysis 📍
 
 Dataset Overview
+Continuous expeditionary walk starting in Santa Marta, Colombia, capturing long-horizon egocentric locomotion. Optimized for:
 
-This dataset captures long-horizon egocentric locomotion, beginning in Santa Marta, Colombia, using a terrain- and state-triggered event capture paradigm. It is optimized for egocentric perception, long-horizon trajectory modeling, SLAM, navigation, and robotics research.
+Egocentric perception & navigation
+
+Long-horizon trajectory modeling
+
+SLAM & visual localization
+
+Robotics terrain traversal & planning
+
+Human locomotion & fatigue modeling
+
+Core principle: Event-driven recording triggers only when meaningful changes occur, producing sparse, high-information footage ideal for research and model training.
 
 Capture Paradigm
-
-The dataset represents a continuous expeditionary walk, generating temporally coherent sequences appropriate for long-horizon perception and planning tasks.
-
-Recording is event-driven rather than time-driven. Segments are initiated when changes occur that are informative for analysis or model training.
-
-Trigger conditions include:
-
+Event Triggers Include:
 Terrain geometry transitions (flat → incline → decline, curvature changes)
 
 Surface changes (paved, dirt, sand, rocky, loose aggregate)
 
 Environmental shifts (weather, heat, wind, visibility)
 
-Physiological state changes (fatigue, heat stress, gait adaptation)
+Physiological state changes (perceived fatigue, heat stress, gait adaptation — subjective observations only, no biometric sensors)
 
 Infrastructure encounters (settlements, bridges, man-made obstacles)
 
-This approach prioritizes information density over duration, reducing redundancy while preserving contextual continuity.
+Result: High-signal segments with reduced redundancy and temporally coherent sequences suitable for long-horizon modeling.
 
-Perspective and Modality
-
+Perspective & Modality
 Single forward-facing camera
 
-No speech or narration
-
-No audio reliance
+No audio or narration
 
 Consistent egocentric viewpoint
 
-This design minimizes confounding variables and maximizes usability for vision-based systems, egocentric perception models, and navigation research.
+Pure visual input, optimized for vision-based AI and robotics systems.
 
-GPS Anchoring
+GPS Anchoring & Metadata
+Start and end-of-day GPS anchors plus per-segment metadata
 
-Start and end-of-day anchors, plus per-segment metadata
+Metadata includes:
 
-Supports geospatial correlation, trajectory reconstruction, mapping, and path analysis
-
-Exact locations can be abstracted to preserve discretion while retaining analytical value
-
-Metadata Handling
-
-Metadata is logged externally and separately from video files
-
-Includes high-level descriptors of:
-
-Terrain and surface type
+Terrain & surface type
 
 Environmental conditions
 
-Physiological state indicators
+Physiological state indicators (subjective observations only, e.g., perceived fatigue, heat stress; no biometric sensor data)
 
-Segment timing and expedition progression
+Segment timing & expedition progression
 
 Optional GPS anchor references
 
-This preserves the purity of visual data while providing contextual ground truth for research and modeling.
+Purpose: Enables trajectory reconstruction, mapping, SLAM evaluation, while preserving discretion and analytical value.
+
+Metadata stored separately to maintain purity of visual data.
+
+Verification workflow confirms completeness and integrity prior to storage.
 
 Storage & Data Integrity
+Videos stored unmodified in original capture format
 
-Videos are stored unmodified in original capture format
-
-Stored both locally and in cloud storage
+Dual storage: local and cloud
 
 Verification workflow ensures:
 
-Each file is playable
+Segment completeness
 
-Each segment is complete
+Playability
 
-Integrity is confirmed prior to any optional local cleanup
-
-Establishes a clear, auditable chain from capture to storage.
+Clear, auditable chain of custody
 
 Single-Person, Single-Source Advantages
+Complete traceability — fully documented segments
 
-Complete provenance and traceability — every segment is fully documented 
+Compliance-friendly — no multi-party ownership or consent ambiguity
 
-Compliance-friendly — aligns with GDPR and EU AI Act transparency expectations for AI training data
+Uniform quality — consistent camera angle, metadata strategy, and capture paradigm
 
-Consistent quality — uniform camera angle, metadata strategy, and capture paradigm
+High signal, low noise — only meaningful content captured
 
-High signal, low noise — event-driven capture ensures meaningful content
-
-Simplified licensing and distribution — no multi-party ownership issues
-
-Ideal for validation and benchmarking — fully transparent and auditable dataset
+Simplified licensing & distribution — ready for research and AI model training
 
 Intended Use Cases
-
-Egocentric perception and navigation
+Egocentric perception & navigation
 
 Long-horizon trajectory modeling
 
-SLAM and visual localization evaluation
+SLAM & visual localization evaluation
 
-Robotics terrain traversal and planning
+Robotics terrain traversal & planning
 
-Human locomotion and fatigue modeling
+Human locomotion & fatigue modeling
 
-Environmental and geospatial analysis
+Environmental & geospatial analysis
 
-Robustness and domain generalization studies
+Robustness & domain generalization studies
 
-Dataset Characteristics and Limitations
+Limitations
+Single-subject perspective
 
-Real-world conditions are inherently variable
+GPS reflects consumer-grade device accuracy
 
-Single-subject, first-person perspective
-
-GPS accuracy reflects consumer-grade devices
+Real-world environmental variability is inherent
 
 Designed for research, modeling, and benchmarking, not continuous commercial mapping
 
 Citation & Compliance
+Fully traceable, single-source dataset
 
-This dataset aligns with data transparency and provenance requirements under emerging AI regulation:
+No identifiable individuals; GPS can be abstracted for privacy
 
-“Under the EU Artificial Intelligence Act, providers of general-purpose AI models must publish high-level summaries of the data sources used in training, including major domains and dataset origins — increasing transparency and supporting lawful, responsible use.”
+Metadata is fully referenced and auditable
 
-Licensing and attribution are simplified due to single-source ownership.
+Aligned with GDPR principles and emerging EU AI Act transparency expectations
+
+Simplified licensing due to sole ownership
+
+✅ Core Signal: Sparse, high-information, fully auditable egocentric locomotion data, optimized for AI, robotics, and perception research.
+
+📬 Contact & Licensing
+Contact: Michael Dee fieldwalk.data@gmail.com
+
+Licensing: Single-source, fully auditable dataset. Licensed for research, AI training, and robotics applications.
+
+Note:
+
+✅ All data fully traceable and auditable
+
+🧪 Free sample access available for qualified researchers
+
+💼 Commercial use requires explicit permission and licensing agreement
+
+Feel free to reach out for custom dataset access, collaborations, or inquiries.
+
+About
+Created by Michael Dee — one person, one phone, one continuous expedition.
