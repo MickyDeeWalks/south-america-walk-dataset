@@ -211,12 +211,8 @@ Commercial use: explicit permission & licensing agreement required
 Privacy: audio transcribed; raw audio not distributed; GPS limited to segment start/end and screenshot EXIF only
 
 
-About / Contact
 
 Michael Dee — one person, one phone, one continuous expedition
 Contact: metadatawalker@gmail.com
 
 
-Emphasizes niche value vs multi-subject academic datasets
-
-Maintains readability, privacy, and GitHub structure
