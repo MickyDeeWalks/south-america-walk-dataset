@@ -1,200 +1,236 @@
-MetaDataWalker: Long-Horizon Egocentric Locomotion Dataset
+MetaDataWalker
 
+Long-Horizon Egocentric Embodied Locomotion Dataset
 
-TL;DR
-Single-person, fully documented, long-horizon egocentric locomotion dataset with auditable provenance, controlled ingestion, and disturbance-aware walking data captured across diverse real-world terrain.
+Last updated: March 2025
 
-Event-driven capture — only meaningful terrain, environmental, and subjective physiological changes are recorded.
+TL;DR: MetaDataWalker is a single-person, fully documented, long-horizon egocentric dataset capturing continuous embodied human adaptation during a real-world expedition. Locomotion and decision-making are recorded together as terrain, environment, and internal physical state evolve. Data consists of raw, forward-facing, silent, uncompressed FHD video with consistent metadata, auditable provenance, and cryptographic integrity verification. Decision-making is captured via contemporaneous audio logs (provided as transcripts), documenting timing, rationale, and contextual triggers for robotics and AI research.
 
-Raw forward-facing, silent, uncompressed FHD video — no in-camera optimizers, HDR, or digital stabilization.
+All navigation is entirely human-driven: decisions are made biologically using eyesight, environmental cues, road maps, signage, and local advice. The phone is used only to log GPS coordinates at the start and end of day and segment points, not for navigation.
 
-Consistent core metadata from day one to end-of-expedition, with selective augmentation when terrain or environment dictates (e.g., arid deserts, dense urban zones).
+This dataset intentionally focuses on depth and ecological realism of one human’s embodied experience rather than breadth across multiple subjects. Researchers should interpret findings accordingly.
 
-SHA-256 hashes generated at the desktop ingestion point establish a verifiable integrity baseline after field capture and cloud transfer, ensuring traceability from phone → cloud → controlled ingestion.
 
 Dataset Overview
 
-This dataset captures a continuous, long-horizon expeditionary walk through Colombia, Ecuador, Peru, Chile, and Argentina, spanning arid deserts, rocky passes, rural corridors, and dense urban environments.
+MetaDataWalker captures a continuous expeditionary walk through Colombia, Ecuador, Peru, Chile, and Argentina, spanning deserts, rocky passes, rural corridors, and dense urban areas. It preserves ecological validity while supporting research into embodied systems beyond controlled lab conditions.
 
-It is designed for high-fidelity egocentric locomotion data, supporting long-horizon modeling while maintaining legal compliance, single-source provenance, and auditable handling throughout the data lifecycle.
+Walking behavior and decisions are inherently coupled. Terrain negotiation, balance maintenance, pacing, route choice, stopping, and context-driven decisions emerge as a single adaptive process. Visual and metadata modalities are maintained separately but linked, enabling multi-modal research while ensuring full auditability.
 
-Optimized for:
+Estimated total size: ~130 GB
 
-Egocentric perception and navigation
+Format: Raw FHD video (silent), audio transcripts, screenshots with embedded GPS/altitude, structured metadata
+
+
+Optimized For
+
+Egocentric perception & navigation
 
 Long-horizon trajectory modeling
 
-SLAM and visual localization
+SLAM & visual localization
 
-Robotics terrain traversal and planning
+Robotics terrain traversal & planning
 
-Embodied systems and disturbance-aware locomotion research
+Embodied AI & context-aware locomotion research
+
+Embodied Adaptation & Decision Context
+
+The dataset captures real-time adaptation in both movement and decision-making. Walking behavior evolves continuously with:
+
+Terrain geometry & surface conditions
+
+Environmental factors (weather, urban density, obstacles)
+
+Internal physical state (fatigue, energy availability, heat stress)
+
+Decisions are expressed through gait modulation, posture, path selection, and extemporaneous audio reasoning.
+
+
+Decisions related to:
+
+Route selection
+
+Pacing & stopping
+
+Risk tolerance
+
+Energy management
+
+…occur naturally in response to changing conditions. Audio transcripts document timing, speed, and rationale, providing a rich signal for modeling adaptive human behavior under dynamic physical and environmental contexts.
 
 Relevance to Robotics & Embodied Systems
 
+Embodied systems operate in unstructured environments where:
 
+Terrain irregularities
 
-Embodied systems increasingly operate outside controlled environments, where terrain irregularities, surface compliance, and traction variability introduce balance disturbances that differ from nominal locomotion conditions.
+Surface compliance
 
-This dataset captures human locomotion under real-world conditions, including moments where balance is challenged but maintained through continuous adaptation rather than discrete recovery events.
+Traction variability
+
+Environmental stress
+
+…produce continuous disturbances. This dataset captures human locomotion under such conditions, including moments where balance is challenged but maintained through ongoing adaptation.
+
 
 Observed behaviors include:
 
-Minor slips and transient traction loss
+Minor slips & transient traction loss
 
-Rapid foot placement and stance adjustment
+Rapid foot placement & stance adjustment
 
-Upper-body compensation and momentum regulation
+Upper-body compensation & momentum regulation
 
-Smooth gait adaptation following disturbance
+Smooth gait adaptation after disturbance
 
-These naturally occurring transitions provide informative reference signals for a range of applications, including:
+These naturally occurring transitions serve as reference signals for:
 
-Humanoid and legged robotics
+Humanoid & legged robotics
 
-Embodied AI and control systems
+Assistive mobility & prosthetics
 
-Assistive mobility and prosthetics research
+Biomechanics & human movement modeling
 
-Biomechanics and human movement analysis
+Simulation & digital twins
 
-Simulation, digital twins, and safety modeling
+Safety modeling
 
-Humanoid platforms are a prominent beneficiary due to ongoing challenges in balance maintenance and traction-aware locomotion, while the dataset remains broadly applicable to embodied systems research.
 
 Capture Paradigm
 
+Recording is fully context-driven with no predefined triggers. Footage is captured whenever terrain, environmental, or embodied conditions indicate relevant data.
+
+Video clips: ~1 minute duration
+
+Audio rationale: Recorded contemporaneously, transcribed for privacy
+
+Screenshots: Environmental context, signs, terrain details
+
+Vehicle-assisted/hitchhiked segments are documented for transparency and exclusion
+
+Data Modalities
+Modality	Details
+Video	Raw FHD (1920×1080), silent, in-camera optimizers/HDR/stabilization disabled, forward-facing egocentric viewpoint
+Audio	Decision rationale recordings; raw audio not distributed, transcripts provided
+Screenshots	Environmental context, signs, terrain details; each contains embedded EXIF GPS + altitude; no text/graphics overlaid
+Metadata	Structured JSON/CSV per segment (baseline + augmented fields)
+GPS	Start & end coordinates per video segment; start & end of day anchors only; no navigation
 
 
-Capture is event-driven, not continuous for its own sake. Recording is triggered by meaningful changes, including:
+GPS & Location Data
 
-Terrain geometry transitions (flat → incline → decline, curvature changes)
+Purpose: GPS logging is used only for measurement, not navigation.
 
-Surface changes (paved, dirt, sand, rock, loose aggregate)
+Navigation decisions are made biologically: eyesight, maps, signage, local advice
 
-Environmental shifts (weather, heat, wind, visibility)
+Location services active only at segment start/end points
 
-Subjective physiological changes (fatigue, gait adaptation; subjective only)
+Video clips ~1 minute → start/end coordinates reasonably approximate the path
 
-Infrastructure encounters (settlements, bridges, man-made obstacles)
+Screenshots provide additional geo-referenced visual context
 
-Extreme terrain segments, including arid deserts and dense urban zones, receive augmented metadata to preserve analytical fidelity.
+Provided Data:
 
-Any vehicle-assisted or hitchhiked stretches are explicitly documented for transparency and exclusion where required.
+Start of day: GPS coordinate + altitude
 
-Camera & Data Modality
+Each video segment: Start GPS + altitude, End GPS + altitude
+
+Each audio segment: Start GPS + altitude, End GPS + altitude
+
+Each screenshot: GPS + altitude embedded in EXIF metadata
+
+End of day: GPS coordinate + altitude
 
 
+Metadata Schema
+
+Metadata structured in two tiers: Baseline (all segments) and Augmented (environment-specific).
+
+Baseline Fields: DATE, EXPEDITION DAY, COUNTRY, COUNTRY DAY, REGION, NEAREST PLACE, TIMEZONE, EVENT TRIGGER, SEGMENT START/END TIME, ELEVATION TREND, TERRAIN, TEMPERATURE, INFRASTRUCTURE, SURFACE, SURFACE CONDITION, STABILITY, TRACTION, LIGHT, WEATHER, GAIT CHANGES, MOTION, FOOT PLACEMENT, HAZARDS, HEAT STRESS, WATER END, FATIGUE, PAIN/ISSUES, FOOTWEAR CONDITION, PACK WEIGHT, CAMERA HEIGHT, CAMERA ANGLE, NOTES
+
+Augmented Fields:
+
+Arid Zones: SAND TYPE, SURFACE STABILITY, DUST, CRACK DENSITY, VEGETATION, HEAT REFLECTION, WIND, WATER AVAILABILITY
+Urban Zones: TRAFFIC DENSITY, PEDESTRIAN DENSITY, CROSSINGS, OBSTACLE TYPE, SURFACE VARIABILITY, NOISE LEVEL, LIGHTING, NAVIGATION METHOD, URBAN TYPE, SIDEWALK CONDITION
 
 
-Single forward-facing camera
+Audio & Privacy
 
-No audio capture
+Audio captures real-time decision rationale
 
-Raw FHD video
+Raw audio files are not distributed
 
-In-camera optimizers, HDR, and stabilization disabled
+Transcripts are AI-assisted (OpenAI Whisper) and manually reviewed to remove names, addresses, and third-party speech
 
-Fixed egocentric viewpoint maintained throughout the expedition
+Only transcripts released, timestamp-linked to video segments
 
-The metadata structure remains stable across the dataset, with selective augmentation based only on terrain or environmental context.
+Ethical compliance: collected in public spaces, aligned with local laws
 
-The result is pure visual input optimized for vision-based AI, robotics, and trajectory modeling without preprocessing requirements.
 
-Ecological Validity
+Dataset Size
 
-To preserve ecological validity, video is captured during natural walking with a forward-facing camera orientation.
+Video: ~110 GB (raw FHD, 1-min clips)
 
-Unlike laboratory protocols that enforce constant downward gaze, this dataset reflects real-world human behavior: vision directed approximately 1–2 steps ahead, with peripheral awareness managing immediate foot placement.
+Audio transcripts: ~1 GB
 
-This preserves authentic posture, balance dynamics, and continuous disturbance response across varied terrain.
+Screenshots: ~15 GB (EXIF GPS + altitude)
+
+Metadata: <1 GB JSON/CSV per segment
+
+Total: ~130 GB
+
 
 Quality Control Indicators
 
+Disturbance-driven adaptations preserved
 
+Non-failure stabilization sequences retained
 
+Balance-challenging conditions captured without catastrophic falls
 
-Disturbance-driven adaptations are preserved rather than filtered
+Continuous stabilization emphasized over post-fall recovery
 
-Non-failure stabilization sequences are explicitly retained
-
-Recording avoids catastrophic fall events while capturing balance-challenging conditions
-
-Emphasis is placed on continuous stabilization, not post-fall recovery
-
-This supports research into traction-aware locomotion, balance maintenance, and adaptive control strategies across multiple domains.
-
-GPS Anchoring & Metadata
-
-
-
-
-Start-of-day and end-of-day GPS anchors
-
-Per-segment metadata including:
-
-Terrain type and surface
-
-Environmental conditions
-
-Subjective physiological indicators
-
-Segment timing and duration
-
-Supports trajectory reconstruction, mapping, and SLAM evaluation.
-
-GPS and structured metadata are maintained separately from visual data to preserve raw video integrity.
-
-Documentation Workflow
-
-
-
-Metadata is generated contemporaneously with capture, with optional augmentation when terrain or environmental conditions demand additional detail.
-
-This workflow ensures a legally auditable, traceable record from field capture through ingestion and long-term storage.
 
 Data Integrity & Provenance
 
+Chain of Custody: capture → local device → cloud → desktop ingestion, with logs and timestamps
+
+Field Handling & Transfer: all transfers logged, cryptographic integrity applied
+
+Hash Verification: SHA-256 baseline checks
+
+Segment Checks: completeness, playability, metadata alignment verified
 
 
-Chain of Custody:
-Each segment is tracked from capture → local device → cloud storage → desktop ingestion, with handling logs and timestamps.
+Dataset is auditable and legally compliant, with single-person sourcing simplifying licensing and attribution. Scope is intentionally single-subject; researchers should consider this when interpreting generalization.
 
-Field handling and cloud transfer are logged, with cryptographic integrity guarantees beginning at controlled desktop ingestion.
-
-Hash Verification:
-SHA-256 hashes are generated at the desktop ingestion point, establishing a verifiable integrity baseline for each file after transfer.
-
-Segment Integrity Checks:
-Completeness, playability, and metadata alignment are verified prior to release.
-
-The dataset is fully auditable and legally compliant. Single-person sourcing simplifies licensing, attribution, and downstream use.
 
 Subject & Safety Context
 
-All locomotion data is captured by a single, consistent human subject to preserve viewpoint stability and eliminate inter-subject variance.
+Single, consistent human subject for viewpoint stability
 
-The subject is physically capable of sustained long-distance walking across variable terrain, enabling natural traversal of uneven surfaces, loose ground, and traction-variable environments.
+Movement reflects natural responses to terrain, traction, fatigue, and environmental exposure
 
-Safety is maintained through conservative exposure limits, avoidance of unmanageable hazards, and immediate cessation of recording when environmental conditions exceed safe human traversal thresholds.
+No supports, tethers, corrective aids, or staged recovery behaviors
 
-No supports, tethers, corrective aids, or staged recovery behaviors are used. Movement reflects natural human responses to terrain irregularities, traction changes, and balance perturbations.
+Safety ensured via conservative exposure limits and immediate cessation if conditions exceed safe traversal thresholds
+
+Licensing & Access
+
+Research / AI / robotics: free sample access for qualified researchers
+
+Commercial use: explicit permission & licensing agreement required
+
+Privacy: audio transcribed; raw audio not distributed; GPS limited to segment start/end and screenshot EXIF only
+
 
 About / Contact
 
-
-
-Michael Dee — one person, one phone, one continuous expedition.
-
-
+Michael Dee — one person, one phone, one continuous expedition
 Contact: metadatawalker@gmail.com
 
 
-Licensing:
-Single-source, fully auditable dataset.
-Research / AI / robotics: free sample access for qualified researchers.
-Commercial use requires explicit permission and a licensing agreement.
+Emphasizes niche value vs multi-subject academic datasets
 
-
-
-
+Maintains readability, privacy, and GitHub structure
