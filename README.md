@@ -1,269 +1,203 @@
-MetaDataWalker
+MDW Expedition — Phase 1: Cerro Chacaltaya / El Alto Slopes, Bolivia
+Overview
 
-**Long-Horizon Egocentric Embodied Locomotion Dataset**  
-**Last updated:** March 2025
+Phase 1 captures one human subject — a 51-year-old, physically fit individual from the UK — living, moving, and thinking in a novel high-altitude environment. This first-person, longitudinal dataset is designed for AI, robotics, and human performance research, while faithfully documenting the lived experience of a single person adapting to new terrain, weather, and minimalist living conditions.
 
----
+Location: mid-to-upper slopes of Cerro Chacaltaya, near El Alto (~4,100–4,250 m).
 
-## TL;DR
+Varied terrain: inclines, declines, ridges, plateaus, rocky paths, loose gravel
 
-**MetaDataWalker** is a single-subject, fully documented, long-horizon egocentric dataset capturing continuous embodied human locomotion and decision-making during a real-world expedition across **Colombia, Ecuador, Peru, Chile, and Bolivia**.
+Quiet areas for cowboy camping and uninterrupted capture
 
-The dataset records **movement and decisions as a coupled biological process**, evolving over time in response to terrain, environment, and internal physical state. Data consists of raw, forward-facing, silent, uncompressed Full HD video with consistent metadata, auditable provenance, and cryptographic integrity verification. Decision-making context is captured via contemporaneous audio logs, released as privacy-sanitized transcripts aligned to video segments.
+Access to town (~45 min walk) for resupply; urban/cultural segments optional
 
-The dataset prioritizes **longitudinal depth, ecological realism, and continuity** over subject diversity, making it suitable for research into embodied AI, robotics, and adaptive locomotion beyond controlled laboratory conditions.
+Purpose: Capture a single, high-performing human subject navigating new terrain, testing physical and cognitive limits, and living minimally. Key elements:
 
----
+Physical performance: walking, running, sprinting, quadrupedal crawling across varied terrain
 
-## Core Principles
+Cognitive adaptation: decision-making under fatigue, environmental stress, high-altitude exposure
 
-- Single human subject for viewpoint and behavioral consistency  
-- Long-horizon continuity across countries, climates, and elevations  
-- Biological navigation only (no GPS-based routing or turn-by-turn guidance)  
-- Locomotion and decision-making captured together as a unified process  
-- Raw data preservation with minimal preprocessing  
-- Full auditability and verifiable provenance  
+Minimalist living: cowboy camping, lightweight gear, self-sufficiency
 
----
+Optional urban/cultural capture: pedestrian flow, vehicle interactions, environmental immersion [only when naturally occurring]
 
-## Dataset Overview
+Research Questions (Analyst-Focused)
 
-MetaDataWalker captures a continuous expeditionary walk through **Colombia, Ecuador, Peru, Chile, and Bolivia**, spanning:
+Designed for external analysts to extract insight from a single human subject:
 
-- Tropical and arid lowlands  
-- Rocky mountain passes  
-- Coastal corridors  
-- Dense urban environments  
-- Remote rural routes  
-- High-altitude Andean plateau environments  
+Cognitive-Physical Coupling: How do fatigue, environmental stress, and terrain variability influence decision-making?
 
-The dataset preserves ecological validity while supporting research into embodied systems operating under **unstructured, real-world conditions over extended time horizons**.
+Adaptive Locomotion: How does the body adjust gait, posture, and movement strategy across variable terrain and weather?
 
-Walking behavior and decisions are inherently coupled. Terrain negotiation, balance maintenance, pacing, route choice, stopping behavior, and risk tolerance emerge as a **single adaptive biological process**, not discrete tasks. Visual, audio, and metadata modalities are maintained separately but are temporally and contextually linked, enabling multimodal research while retaining full traceability.
+Endurance vs. Recovery: Patterns in performance, recovery, and fatigue during high-performance locomotion
 
-**Estimated total size:** ~200–300 GB (final size dependent on terrain density, capture frequency, and expedition duration)
+Minimalist Living Impact: Effects of cowboy-camping, off-grid survival, and lightweight living on cognition and resilience
 
----
+Environmental Interaction: How do altitude, temperature, surface type, and hazards affect physical and cognitive performance?
 
-## Data Composition
+Segment-Level Dynamics: How do short-term activity segments (e.g., incline walks, sprints, quadrupedal crawl, urban navigation) influence subsequent states?
 
-**Formats**
-- Raw Full HD video (1920×1080), silent  
-- Decision rationale transcripts (raw audio not distributed)  
-- Screenshots with embedded GPS and altitude  
-- Structured metadata (JSON / CSV)  
+Physical Locomotion & Testing
 
-**Capture Characteristics**
-- Forward-facing egocentric viewpoint  
-- In-camera HDR, stabilization, and optimizations disabled  
-- Approximately 1-minute video segments  
-- Continuous capture driven by environmental relevance, not scripted triggers  
+Walking: brisk, terrain-adaptive, inclines, declines
 
----
+Running: uneven terrain, endurance-focused
 
-## Optimized For
+Sprinting: short bursts exceeding typical age norms
 
-- Egocentric perception and navigation  
-- Long-horizon trajectory modeling  
-- SLAM and visual localization  
-- Terrain traversal and motion planning  
-- Embodied AI and adaptive control  
-- Altitude- and fatigue-constrained locomotion  
-- Biologically grounded decision modeling  
+Quadrupedal Crawling: low-to-ground, full-body engagement for stability, proprioception, and muscular endurance
 
----
+Torso: forward-leaning (~15–30 cm above ground)
 
-## Embodied Adaptation & Decision Context
+Limbs: alternating diagonal/lateral steps
 
-The dataset captures **real-time adaptation** in both movement and decision-making. Walking behavior evolves continuously in response to:
+Core & balance: continuous adaptation
 
-- Terrain geometry and surface compliance  
-- Traction variability and surface condition  
-- Environmental stressors (heat, wind, urban density, altitude)  
-- Internal physical state (fatigue, pain, energy availability, heat stress)  
+Speed/intensity: deliberate, endurance-focused
 
-Decisions are expressed implicitly through gait modulation, posture, pacing, route selection, stopping behavior, and risk avoidance, and explicitly through contemporaneous audio reasoning.
+Forward-facing capture is primary; camera can adjust slightly for cognitive/urban segments.
+Audio recordings: spontaneous reflections, environmental assessment, and off-the-cuff decision-making, not transcribed.
 
-Decision categories include:
+Environment: Cerro Chacaltaya / El Alto Slopes
 
-- Route selection and deviation  
-- Pacing and rest timing  
-- Risk tolerance and hazard avoidance  
-- Energy and water management  
+Terrain: inclines, declines, ridges, plateaus, rocky paths, loose gravel
 
-Audio transcripts document **timing, rationale, and contextual triggers**, providing a longitudinal signal for modeling adaptive human behavior under dynamic physical and environmental constraints.
+Flat/gently sloped plateaus: camping, sprinting, walking, crawling
 
-High-altitude environments, particularly in Bolivia, introduce sustained physiological load that influences pacing, gait stability, and decision thresholds. These effects are captured implicitly through behavioral adaptation and decision rationale rather than through medical instrumentation.
+Quiet plateau areas for uninterrupted capture
 
----
+Optional urban segments: pedestrian flow, traffic interaction, market navigation — supplemental, naturally occurring
 
-## Relevance to Robotics & Embodied Systems
+Data Structure
+Start-of-Day Metadata
 
-Embodied systems must operate in environments characterized by:
+Expedition day, location, timezone, day start
 
-- Irregular terrain  
-- Variable traction and surface compliance  
-- Environmental stress  
-- Cumulative fatigue and disturbance  
+GPS coordinates & altitude
 
-MetaDataWalker captures human locomotion under such conditions, including moments where balance is challenged but maintained through continuous micro-adjustments rather than failure and recovery.
+Terrain, elevation trend, infrastructure, surface type
 
-Observed behaviors include:
+Gear: footwear, pack, sleeping bag, clothing
 
-- Minor slips and transient traction loss  
-- Rapid foot placement and stance correction  
-- Upper-body compensation and momentum regulation  
-- Smooth gait adaptation following disturbance  
+Physical/cognitive: fatigue, pain, mood, alertness, stress, sleep quality
 
-These naturally occurring transitions provide reference data for:
+Environmental: temperature, light, weather, heat stress, water intake
 
-- Humanoid and legged robotics  
-- Assistive mobility and prosthetics  
-- Biomechanics and human movement modeling  
-- Simulation and digital twin environments  
-- Safety and failure-avoidance modeling  
+Notes
 
----
+Segment Metadata
 
-## Capture Paradigm
+Event trigger, segment start/end, location
 
-Recording is **fully context-driven**, with no predefined triggers or scripted scenarios.
+GPS coordinates & altitude for segment start and end
 
-Data is captured whenever terrain, environmental conditions, or embodied state indicate relevance.
+Terrain, surface, hazards, motion type
 
-- Video segments: ~1 minute  
-- Audio rationale: recorded contemporaneously, released as transcripts  
-- Screenshots: environmental context, signage, terrain details  
+Physical/gait: gait changes, fatigue, pain, pack weight
 
-Vehicle-assisted or hitchhiked segments are explicitly documented for transparency and exclusion.
+Weather/environment: temperature, light, wind, heat/cold stress, water intake
 
----
+Cognitive/psychological: mood, alertness, stress, decision load
 
-## Data Modalities
+Gear/capture: camera angle, height, FHD, clothing
 
-**Video**
-- Raw Full HD (1920×1080), silent  
-- Forward-facing egocentric viewpoint  
-- No stabilization, HDR, or overlays  
+Nutrition/energy: optional food/water
 
-**Audio**
-- Decision rationale recordings  
-- Raw audio not distributed  
-- Privacy-sanitized transcripts released  
+Notes: qualitative observations
 
-**Screenshots**
-- Environmental context, signage, terrain  
-- Embedded EXIF GPS and altitude  
-- No added graphics or annotations  
+End-of-Day Metadata
 
-**Metadata**
-- Structured JSON/CSV per segment  
-- Baseline and augmented fields  
+Day end, location, timezone
 
----
+GPS coordinates & altitude
 
-## GPS & Location Data
+Physical/cognitive: fatigue, pain, mood, alertness, stress
 
-**Purpose:** Measurement only, not navigation.
+Environment: cumulative exposure
 
-- Navigation decisions are made biologically using eyesight, maps, signage, and local advice  
-- Location services active only at segment start/end and screenshot capture  
-- Video segments (~1 minute) include start and end coordinates  
-- Screenshots provide additional geo-referenced context  
+Gear condition
 
-**Provided Data**
-- Start of day: GPS coordinate + altitude  
-- Each video segment: start/end GPS + altitude  
-- Each audio segment: start/end GPS + altitude  
-- Screenshots: GPS + altitude embedded in EXIF  
-- End of day: GPS coordinate + altitude  
+Notes: reflections, deviations, outcomes
 
----
+Audio Notes
 
-## Metadata Schema
+Spontaneous reflections; not transcribed
 
-Metadata is structured in two tiers: **Baseline** and **Augmented**.
+Capture cognition, terrain assessment, and decision-making
 
-### Baseline Fields
-DATE, EXPEDITION DAY, COUNTRY, COUNTRY DAY, REGION, NEAREST PLACE, TIMEZONE, EVENT TRIGGER, SEGMENT START TIME, SEGMENT END TIME, ELEVATION TREND, TERRAIN, TEMPERATURE, INFRASTRUCTURE, SURFACE, SURFACE CONDITION, STABILITY, TRACTION, LIGHT, WEATHER, GAIT CHANGES, MOTION, FOOT PLACEMENT, HAZARDS, HEAT STRESS, WATER END, FATIGUE, PAIN/ISSUES, FOOTWEAR CONDITION, PACK WEIGHT, CAMERA HEIGHT, CAMERA ANGLE, NOTES
+Supplement metadata; optional in urban/cultural segments
 
-### Augmented Fields
+Data Governance, Forward-Facing Capture & Robotics Focus
 
-**Arid Zones**
-- SAND TYPE  
-- SURFACE STABILITY  
-- DUST  
-- CRACK DENSITY  
-- VEGETATION  
-- HEAT REFLECTION  
-- WIND  
-- WATER AVAILABILITY  
+Forward-facing egocentric camera for locomotion, environmental analysis, and cognitive/physical observation
 
-**Urban Zones**
-- TRAFFIC DENSITY  
-- PEDESTRIAN DENSITY  
-- CROSSINGS  
-- OBSTACLE TYPE  
-- SURFACE VARIABILITY  
-- NOISE LEVEL  
-- LIGHTING  
-- NAVIGATION METHOD  
-- URBAN TYPE  
-- SIDEWALK CONDITION  
+SHA-256 hashes guarantee file integrity, reproducibility, and collaboration readiness
 
----
+Multimodal richness: metadata, audio, and video allow robotics/AI teams to:
 
-## Audio & Privacy
+Train real-world navigation algorithms
 
-- Audio captures real-time decision rationale  
-- Raw audio files are not distributed  
-- Transcripts generated using AI-assisted transcription and manually reviewed  
-- Names, addresses, and third-party speech removed  
-- Transcripts are timestamp-aligned to video segments  
+Model gait and posture across variable terrain
 
-All data is collected in public spaces and aligned with local laws and ethical research standards.
+Study terrain and hazard interaction
 
----
+Simulate environmental adaptation and cognitive load under physical stress
 
-## Quality Control Indicators
+Metadata and audio/video stored in structured JSON/CSV formats
 
-- Disturbance-driven adaptations preserved  
-- Non-failure stabilization sequences retained  
-- Balance-challenging conditions captured without catastrophic falls  
-- Continuous stabilization emphasized over post-fall recovery  
+Dataset captured by a single subject; urban/cultural segments recorded opportunistically
 
----
+Daily review ensures completeness and accuracy
 
-## Data Integrity & Provenance
+Designed for instant usability by robotics/AI teams, with reproducible, high-fidelity, first-person data
 
-- End-to-end chain of custody: capture → local device → cloud → desktop ingestion  
-- All transfers logged with timestamps  
-- Cryptographic integrity verification (SHA-256 baseline checks)  
-- Segment completeness, playability, and metadata alignment verified  
+Future Phases
 
-The dataset is auditable and legally compliant. Single-subject sourcing simplifies licensing and attribution. Scope is intentionally narrow; researchers should consider this when interpreting generalization.
+Potential future phases may explore:
 
----
+Nazca, Peru – arid terrain, desert navigation, cultural site observation
 
-## Subject & Safety Context
+Atacama, Chile – extreme dry desert, varied elevation, sparse resources
 
-- Single, consistent human subject for viewpoint stability  
-- Movement reflects natural responses to terrain, traction, fatigue, and environmental exposure  
-- No supports, tethers, corrective aids, or staged recovery behaviors  
-- Safety ensured via conservative exposure limits and immediate cessation if traversal exceeds safe thresholds  
+Arica, Chile – coastal desert + urban environments, mixed terrain, pedestrian interactions
 
----
+Sucre, Bolivia – city-level cultural and pedestrian observations, mid-altitude testing
 
-## Licensing & Access
+Each future phase may include:
 
-- **Research / AI / robotics:** Free sample access for qualified researchers  
-- **Commercial use:** Explicit permission and licensing agreement required  
-- **Privacy:** Audio transcribed; raw audio not distributed; GPS limited to segment start/end and screenshot EXIF only  
+Terrain adaptation
 
----
+Cowboy camping / minimalist living
 
-## Contact
+Urban/cultural segment capture (selectively)
 
-**Michael Dee**  
-One person. One phone. One continuous expedition.  
-📧 metadatawalker@gmail.com
+Forward-facing + audio multimodal data
+
+SHA-256 hashed files for integrity
+
+Outcome
+
+Phase 1 produces a rich, longitudinal, multi-modal, first-person dataset of a single subject:
+
+Cognitive adaptation and decision-making under fatigue
+
+Physical adaptation to terrain and environmental stress
+
+High-performance locomotion: walking, running, sprinting, quadrupedal crawl
+
+Cowboy-camping and minimalist living
+
+Optional urban/cultural segments in El Alto
+
+Audio reflections augment physical, cognitive, and environmental insights
+
+GPS coordinates and altitude captured for every day and segment
+
+Forward-facing + SHA-256 hashed files ensure high value for robotics, AI, and embodied cognition research
+
+Summary: This is the lived, first-person experience of one high-performing, fit human in a high-altitude, novel environment — captured so analysts and robotics teams can immediately leverage it for locomotion modeling, human-environment interaction, and longitudinal cognitive/physical analysis.
+
+Contact
+
+For questions or access inquiries, contact:
+metadatawalker@gmail.com
