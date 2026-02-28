@@ -233,4 +233,3 @@ Contact
 
 For access inquiries or collaboration: metadatawalker@gmail.com
 
-✅ This version now explicitly includes:
