@@ -33,6 +33,8 @@ Phase 3: Puna grasslands, Argentina – high-altitude grasslands, volcanic outcr
 
 Phases 4 & 5: Cerro Chacaltaya & Sajama foothills, Bolivia – high-altitude slopes, rocky paths, extreme elevation
 
+Note: Depending on field conditions, accessibility, and research priorities, Phase 4 may be conducted entirely at Cerro Chacaltaya for 6 months, or split approximately 3 months at Cerro Chacaltaya and 3 months at the Sajama foothills. This ensures continuous high-altitude data capture while optimizing safety, logistics, and connectivity.
+
 At each base, terrain is selected to support physical testing while remaining within walking distance of a town for resupply and optional urban observation. Cowboy camping is the primary living mode, maintaining a minimalist, off-grid lifestyle.
 
 Audio Capture
